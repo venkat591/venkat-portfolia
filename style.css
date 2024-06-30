@@ -1,0 +1,362 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main{
+  width: 160%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(240, 240, 240);
+}
+.icon{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #fff;
+  margin: 20px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 55px;
+  font-family: sans-serif;
+  overflow: hidden;
+  box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
+  transition: all .3s ease-out;
+}
+.icon:hover{
+  width: 150px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+}
+.icon:hover i{
+  color: #fff;
+}
+.icon .fa-facebook-f{
+  color: #1A6ED8;
+}
+.fb:hover{
+  background: #1A6ED8;
+}
+.icon .fa-twitter{
+  color: #1DA1F2;
+}
+.twt:hover{
+  background: #1DA1F2;
+}
+.icon .fa-linkedin-in{
+  color: #0077B5;
+}
+.lnk:hover{
+  background: #0077B5;
+}
+.icon .fa-github{
+  color: #000;
+}
+.git:hover{
+  background: #000;
+}
+.icon .fa-instagram{
+  color: #e85d00ba;
+}
+.yt:hover{
+  background: #ff7300b0;
+}
+
+/* responsive */
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  .main{
+      flex-direction: column;
+  }
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.section {
+  background-color: var(--extra-light);
+}
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.description1 {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  text-align: initial;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0; /* Remove margin bottom to eliminate spacing */
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.portfolio {
+  color: var(--primary-color);
+}
+
+.portfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+}
+
+.image {
+  place-items: center;
+  display:flex;
+  margin-top: 5rem; /* Adjust image position */
+  width: 280px;
+  height: 300px;
+  border-radius: 10%;
+}
+.subtitle {
+  margin-top: 3rem;
+}
+
+
+.image img {
+  width: 15; /* Adjust image size to 15rem */
+  border-radius: 50%;
+}
+
+@media (width < 750px) {
+  nav .checkbox {
+      display: block;
+  }
+
+  ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 85px);
+      left: -100%;
+      top: 85px;
+      background-color: var(--extra-light);
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+  }
+
+  nav #check:checked ~ ul {
+      left: 0;
+  }
+
+  ul li a {
+      font-size: 1.25rem;
+  }
+
+  .section__container {
+      padding: 10rem 1rem 5rem 1rem;
+      text-align: center;
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+      grid: area 2px / 3px / 4px;
+  }
+  .action__btns {
+      margin: auto;
+}
+}
+.hello {
+  margin: 0px;
+  width: 200%;
+  border: 0 solid green;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+}
+.main{
+  width: 160%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(240, 240, 240);
+}
+.icon{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #fff;
+  margin: 20px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 55px;
+  font-family: sans-serif;
+  overflow: hidden;
+  box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
+  transition: all .3s ease-out;
+}
+.icon:hover{
+  width: 150px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+}
+.icon:hover i{
+  color: #fff;
+}
+.icon .fa-facebook-f{
+  color: #1A6ED8;
+}
+.fb:hover{
+  background: #1A6ED8;
+}
+.icon .fa-twitter{
+  color: #1DA1F2;
+}
+.twt:hover{
+  background: #1DA1F2;
+}
+.icon .fa-linkedin-in{
+  color: #0077B5;
+}
+.lnk:hover{
+  background: #0077B5;
+}
+.icon .fa-github{
+  color: #000;
+}
+.git:hover{
+  background: #000;
+}
+.icon .fa-youtube{
+  color: #e85d00ba;
+}
+.yt:hover{
+  background: #ff7300b0;
+}
+
+/* responsive */
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  .main{
+      flex-direction: column;
+  }
+}
